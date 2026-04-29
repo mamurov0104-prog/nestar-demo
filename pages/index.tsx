@@ -1,21 +1,24 @@
 import {Container , Stack , Box} from "@mui/material"
 import { green , brown } from '@mui/material/colors';
+import withLayoutMain from "../libs/components/layout/LayoutHome";
 
-export default function Home() {
+const Home:NextPage =()=> {
   return (
     <>
  
-         <Stack sx={{background:green[300]}}>Header</Stack>
+         {/* <Stack sx={{background:green[300]}}>Header</Stack> */}
          <Container>
           <Stack flexDirection={"column"}>
             <Box>Popular Properties</Box>
             <Box>RTop Agents</Box>
             <Box>Top Properties</Box>
+            <Box>Events</Box>
           </Stack>
          </Container>
-          <Stack sx={{background:brown[300]}}>Footer</Stack>
+          {/* <Stack sx={{background:brown[300]}}>Footer</Stack> */}
 
 
     </>
   );
 }
+export default withLayoutMain(Home);
