@@ -1,24 +1,27 @@
-import {Container , Stack , Box} from "@mui/material"
-import { green , brown } from '@mui/material/colors';
-import withLayoutMain from "../libs/components/layout/LayoutHome";
+import { Stack } from "@mui/material";
+import { NextPage } from "next";
 
-const Home:NextPage =()=> {
+import withLayoutMain from "@/libs/components/layout/LayoutHome";
+import TrendProperties from "@/libs/components/homepage/TrendProperties";
+import PopularProperties from "@/libs/components/homepage/PopularProperties";
+import Advertisement from "@/libs/components/homepage/Advertisement";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import TopProperties from "@/libs/components/homepage/TopProperties";
+import TopAgents from "@/libs/components/homepage/TopAgents";
+
+const Home: NextPage = () => {
   return (
-    <>
- 
-         {/* <Stack sx={{background:green[300]}}>Header</Stack> */}
-         <Container>
-          <Stack flexDirection={"column"}>
-            <Box>Popular Properties</Box>
-            <Box>RTop Agents</Box>
-            <Box>Top Properties</Box>
-            <Box>Events</Box>
-          </Stack>
-         </Container>
-          {/* <Stack sx={{background:brown[300]}}>Footer</Stack> */}
-
-
-    </>
+    <Stack className={"home-page"}>
+      <TrendProperties />
+      <PopularProperties />
+      <Advertisement />
+      <TopProperties />
+      <TopAgents />
+    </Stack>
   );
-}
+};
+
 export default withLayoutMain(Home);

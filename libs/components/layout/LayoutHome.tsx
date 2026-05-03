@@ -1,39 +1,37 @@
-// import { Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import Head from "next/head";
 import Top from "../Top";
-import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 import Footer from "../Footer";
 import HeaderFilter from "../homepage/HeaderFilter";
-import {Container , Stack , Box} from "@mui/material"
-import { green , brown } from '@mui/material/colors';
 
 const withLayoutMain = (Component: any) => {
-  return(props:any)=>{
-     return (
-        <>
-          <Head>
-            <title>Nestar</title>
-          </Head>
-
-          <Stack id="pc-wrap">
-            
-            <Stack sx={{background:green[300]}}>Header Home</Stack>
-
-            <Stack id={"main"}>
-              <Component {...props} />
-            </Stack>
-
-            <Stack sx={{background:brown[300]}}>
-              Footer
-            </Stack>
-
-
+  return (props: any) => {
+    return (
+      <>
+        <Head>
+          <title>Nestar</title>
+        </Head>
+        <Stack id="pc-wrap">
+          <Stack id={"top"}>
+            <Top />
           </Stack>
-        </>
-      );
-  }
-     
-    }
+          <Stack className={"header-main"}>
+            <Stack className={"container"}>
+              <HeaderFilter />
+            </Stack>
+          </Stack>
 
+          <Stack id={"main"}>
+            <Component {...props} />
+          </Stack>
+
+          <Stack id={"footer"}>
+            <Footer />
+          </Stack>
+        </Stack>
+      </>
+    );
+  };
+};
 
 export default withLayoutMain;

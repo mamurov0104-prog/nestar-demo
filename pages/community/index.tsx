@@ -1,19 +1,14 @@
-"use client";
+import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+import { Stack } from "@mui/material";
+import { NextPage } from "next";
 import { useState } from "react";
-import withLayoutBasic from "../../libs/components/layout/LayoutBasic";
 
 const Community: NextPage = () => {
-  console.log("COMMUNITY COMPONENT - PAGES ROUTER");
-
-  const [title, setTitle] = useState<string>("hello");
   return (
-    <div>
-      Community{" "}
-      <button onClick={() => alert("Hello MIT")} style={{ margin: "15px" }}>
-        PressMe
-      </button>
+    <div style={{ margin: "20px 0" }}>
+      <Stack className="container">COMMUNITY</Stack>
     </div>
   );
 };
 
-export default withLayoutBasic(Community) ;
+export default withLayoutBasic(Community);
