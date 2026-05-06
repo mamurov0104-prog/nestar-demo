@@ -1,12 +1,12 @@
 import React from "react";
-import { Stack, Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import RemoveRedeEyeIcon from "@mui/icons-material/RemoveRedEye";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const PopularPropertyCard = () => {
   return (
-    <Stack className="popular-card-box">
+    <Stack className={"popular-card-box"}>
       <Box
         className={"card-img"}
         style={{
@@ -22,11 +22,11 @@ const PopularPropertyCard = () => {
       </Box>
       <Box className={"info"}>
         <strong className={"title"}>Busan City Hall Apartments</strong>
-        <p className={"desc"}>Good wills</p>
+        <p className={"desc"}>Good Wills</p>
         <div className={"options"}>
           <div>
             <img src="/img/icons/bed.svg" alt="" />
-            <span>3 bed</span>
+            <span>3 beds</span>
           </div>
           <div>
             <img src="/img/icons/room.svg" alt="" />
@@ -34,21 +34,21 @@ const PopularPropertyCard = () => {
           </div>
           <div>
             <img src="/img/icons/expand.svg" alt="" />
-            <span>220 m2</span>
+            <span>2200 m2</span>
           </div>
         </div>
         <Divider sx={{ mt: "15px", mb: "17px" }} />
         <div className={"bott"}>
-          <p>rent</p>
+          <p>Rent</p>
           <div className={"view-like-box"}>
             <IconButton color={"default"}>
-              <RemoveRedeEyeIcon />
+              <RemoveRedEyeIcon />
             </IconButton>
-            <Typography className="view-cnt">50</Typography>
+            <Typography className={"view-cnt"}>50</Typography>
             <IconButton color={"default"}>
               <FavoriteIcon style={{ color: "red" }} />
             </IconButton>
-            <Typography className="view-cnt">250</Typography>
+            <Typography className={"view-cnt"}>250</Typography>
           </div>
         </div>
       </Box>

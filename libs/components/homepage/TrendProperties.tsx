@@ -1,5 +1,5 @@
+import { Box, Stack } from "@mui/material";
 import React, { useState } from "react";
-import { Stack, Box } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";

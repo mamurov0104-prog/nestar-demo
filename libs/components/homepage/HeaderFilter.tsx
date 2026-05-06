@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const HeaderFilter = () => {
@@ -26,7 +26,7 @@ const HeaderFilter = () => {
             <span>Advanced</span>
           </Box>
           <Box className={"search-btn"}>
-            <img src="/img/icons/search_white.svg" />
+            <img src="/img/icons/search_white.svg" alt="" />
           </Box>
         </Stack>
       </Stack>

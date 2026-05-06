@@ -84,7 +84,7 @@ const PropertyCard = () => {
             <IconButton color="default">
               <FavoriteIcon color="primary" />
             </IconButton>
-            <Typography className="view-cnt">2003</Typography>
+            <Typography className="view-cnt">30</Typography>
           </Stack>
         </Stack>
       </Stack>
